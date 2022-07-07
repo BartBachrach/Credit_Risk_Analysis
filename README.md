@@ -8,21 +8,31 @@ The first method we used was random OVERsampling, meaning we took the minority o
 * The precision score was 99%, while the recall score (sensitivity) was 69%, meaning that more loans were labeled as risky than actually were. In lending you would say the mortgage officer is overcautious. 
 * The balanced accuracy score was 65%, overall better than worse, and an acceptable score, not too well fitted, not too loose fitting either
 
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/Random_Oversampling_screenshot.png)
+
 The next method we deployed was random UNDERsampling, where we did the opposite of the previous model: we scaled down the majority (good loans) to match the size of the minority. 
 * The precision score for this model was 99%, with a recall score of 45%, worse than the oversampling model. In other words, this model only predicts 45/100 true positives. In other words, this model is worse than it is good at making a prediction. 
 * The balanced accuracy score was 52%; you would be about as good yourself with a flip of a coin. 
+
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/Undersampling_Screenshot.png)
 
 We then used a combination of the above, referred to as SMOTEENN, or Synthetic Minority Oversampling TEchnique Edited Nearest Neighbors. 
 * The precision was again 99% for this model, but the recall score was 53%, .01 better than undersampling, and again, you would do about as well flipping a coin. 
 * The balanced accuracy score was 62%, better than the undersampling model, but probably would need some improvement.
 
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/Combination_Over:Undersampling_screenshot.png)
+
 We then used a method called Balanced Random Forest Classifier, wherein it created multiple decision trees (hence the name) to make predictions. 
 * This method returned a 99% precision score, and a recall score of 94%. While that looks great, it is perhaps too well fitted to this sample data set, and would need some adjustment before being deployed for real world application.
 * The balanced accuracy score was an admirable 76%; with some adjustment this could be a winning strategy.
 
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/BalancedRandomForest_screenshot.png)
+
 Last we used the AdaBoost EasyEnsembleClassifier, the first part meaning Adaptive Boost, to make predictions. 
 * Its precision score was 99% and like the previous model, it had a recall score of 94%; again.
 * The balanced accuracy score was 92%, meaning this model was definitely too well fitted to the model, and would most likely perform poorly in the real world. 
+
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/AdaBoostClassifier_Screenshot.png)
 
 ## Summary
 The above machine learning models produced a wide range of results with some performing well, some poorly, and some too well. We discovered that machine learning can enhance the business practices of LendingClub and better inform their decisions on whether or not to extend a line of credit to a customer. With further sample data from their business we could further hone the models to best predict the outcome of a line of credit.
