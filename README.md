@@ -16,6 +16,12 @@ The next method we deployed was random UNDERsampling, where we did the opposite 
 
 ![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/M17_Challenge/Module-17-Challenge-Resources/Undersampling_Screenshot.png)
 
+We used a method called SMOTE, Synthetic Minority Oversampling TEchnique to perform a similar analysis to our oversampling technique, but with SMOTE, it increases the variety of the training data set that got synthentically enlarged.
+* The precision was 99%, and the recall score was 64%, a good model, but perhaps not as good as the random oversampling model.
+* the balanced accuracy score was 63%, not terrible, but could use some further adjustment.
+
+![this is an image](https://github.com/BartBachrach/Credit_Risk_Analysis/blob/main/SMOTE_screenshot.png)
+
 We then used a combination of the above, referred to as SMOTEENN, or Synthetic Minority Oversampling TEchnique Edited Nearest Neighbors. 
 * The precision was again 99% for this model, but the recall score was 53%, .01 better than undersampling, and again, you would do about as well flipping a coin. 
 * The balanced accuracy score was 62%, better than the undersampling model, but probably would need some improvement.
